@@ -1,0 +1,25 @@
+# Главные гвардейцы. Можно указать несколько ников и UUID.
+chief-guards:
+  names:
+    - "Fasar"
+    - "oladik"
+  uuids: []
+
+settings:
+  overdue-check-seconds: 60
+  # 0 = вызовы не исчезают из меню, пока гвардеец не закроет их вручную.
+  call-expire-minutes: 0
+  notify-guards-on-join: true
+
+messages:
+  prefix: "&6&lГвардия &8» &r"
+  no-permission: "&cУ вас нет доступа."
+  players-only: "&cЭта команда доступна только игроку."
+  guard-only: "&cДоступно только гвардейцам."
+  fine-issued: "&aШтраф #{id} выдан игроку &e{player}&a: &6{amount}&a, срок &e{deadline}&a."
+  fine-received: "&cВам выписан штраф #{id} на &6{amount}&c. Срок: &e{deadline}&c. Причина: &f{reason}"
+  fine-paid: "&aШтраф #{id} отмечен оплаченным."
+  overdue: "&cПросрочен штраф #{id} на &6{amount}&c! Причина: &f{reason}"
+  call-created: "&aВызов #{id} передан гвардии."
+  call-alert: "&c&lНОВЫЙ ВЫЗОВ #{id} &fот &e{player}&f: {message} &7({world}: {x}, {y}, {z})"
+  application-sent: "&aЗаявка в гвардию отправлена."

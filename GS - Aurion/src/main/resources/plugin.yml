@@ -1,0 +1,42 @@
+name: AurionKara
+version: ${version}
+main: ru.aurion.kara.AurionKaraPlugin
+api-version: '1.21'
+authors: [Aurion]
+description: Штрафы, вызовы 911 и меню гвардии
+
+commands:
+  kara:
+    description: Выдать штраф или управлять штрафами
+    usage: /kara <игрок> <сумма> <время> <причина>
+  "911":
+    description: Вызвать гвардию
+    usage: /911 <описание происшествия>
+  karamenu:
+    description: Открыть меню гвардии
+    usage: /karamenu
+  guard:
+    description: Управление составом гвардии
+    usage: /guard <apply|add|remove|setchief|removechief|list>
+
+permissions:
+  aurionkara.guard:
+    description: Доступ к функциям гвардии
+    default: op
+  aurionkara.fine.issue:
+    description: Выдача штрафов
+    default: op
+  aurionkara.fine.manage:
+    description: Закрытие и удаление штрафов
+    default: op
+  aurionkara.chief:
+    description: Управление составом гвардии
+    default: op
+  aurionkara.admin:
+    description: Полный административный доступ
+    default: op
+    children:
+      aurionkara.guard: true
+      aurionkara.fine.issue: true
+      aurionkara.fine.manage: true
+      aurionkara.chief: true
