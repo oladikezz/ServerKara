@@ -1,0 +1,17 @@
+*.rar
+*.zip
+*.jar
+*.class
+*.log
+
+build/
+**/build/
+.gradle/
+**/.gradle/
+
+.idea/
+*.iml
+.vscode/
+
+.DS_Store
+Thumbs.db
